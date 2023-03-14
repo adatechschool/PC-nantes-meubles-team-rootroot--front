@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import ButtonDesign from './components/ButtonDesign';
+import Card from './components/Card';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import HomeScrollDown from './components/HomeScrollDown'; 
 
 function App() {
+  //STATE
+
+  //COMPORTEMENTS
+
+  //RENDER
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <HomeScrollDown/>
+      <Header/>
+      <ButtonDesign color='secondary' value='text aléatoire'/>
+      <ButtonDesign color='primary' value='Panier'/>
+      <Card title='fauteuil Louis XVI' price='79' type='fauteuil' description="voici un magnifique fauteuil non genré achetez-le"/>
+      <Footer/>
     </div>
   );
 }
