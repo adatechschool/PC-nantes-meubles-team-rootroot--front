@@ -14,4 +14,4 @@ const ButtonDesign = (props) => {
     );
 };
 
-export default ButtonDesign ;
+export default ButtonDesign;
