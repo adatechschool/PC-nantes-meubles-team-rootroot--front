@@ -1,10 +1,8 @@
-import React from 'react';
 import ButtonDesign from '../components/ButtonDesign';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-
-const Cart = () => {
+const Product = () => {
 
     return (
         <div className='container'>
@@ -16,4 +14,4 @@ const Cart = () => {
     );
 }
 
-export default Cart;
+export default Product;

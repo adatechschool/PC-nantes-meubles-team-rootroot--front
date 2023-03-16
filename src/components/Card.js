@@ -1,6 +1,7 @@
 import "./Card.css";
 import meuble from "../assets/meuble.png";
 import icon from "../assets/iconplus.png";
+import { Link } from 'react-router-dom';
 
 //composant "Card" complet
 function Card(props) {
@@ -29,9 +30,9 @@ function Card(props) {
               {description}
             </p>
             
-            <a href="https://forum.alsacreations.com/topic-1-50155-1-Superposer-deux-div-ou-deux-images-en-csshtml-Y.html">
-            <img src={icon} alt="icon" className="iconplus" /> 
-            </a>
+            <Link to='/product'className='categorie'>
+                <img src={icon} alt="icon" className="iconplus" /> 
+            </Link>
 
           </div>
         </div>
