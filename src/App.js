@@ -3,7 +3,8 @@ import ButtonDesign from './components/ButtonDesign';
 import Card from './components/Card';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import HomeScrollDown from './components/HomeScrollDown'; 
+import HomeScrollDown from './components/HomeScrollDown';
+
 
 function App() {
   //STATE
