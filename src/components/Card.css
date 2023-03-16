@@ -4,7 +4,7 @@
     width: 396px;
     border-radius: 45px;
     flex-direction: column;
-   
+    position: relative;
 }
 
 .pictureMeuble {
@@ -16,6 +16,7 @@
 .bottomCard {
     background-color: #DCC0A7;
     border-radius: 0px 0px 45px 45px;
+
 }
 
 .description {
@@ -23,16 +24,49 @@
     flex-direction: column;
     width: 396px;
     height: 151px;
+    
+    padding: 25px 20px 0px 20px;
+    text-align: left;
 }
 
 .titleDescript {
     margin: 0px;
-
 }
 
 .paraphDescript {
     height: 54px;
-    width: 248px;
+    width: 100%;
     margin: 0px;
     font-size: 17px;
+    font-family: 'Inter';
+    font-style: normal;
 }
+
+.type {
+    font-weight: bold;
+}
+
+.descrip-button {
+    display: flex;
+    flex-direction: row;
+}
+
+.price {
+    display: flex;
+    width: 116px;
+    height: 73px;
+    margin: 0px;
+    position: absolute;
+    left: 250px;
+    bottom: 115px;
+}
+
+
+.price p {
+    color: #FFFFFF;
+    font-size: 60px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: bold; 
+}
+
