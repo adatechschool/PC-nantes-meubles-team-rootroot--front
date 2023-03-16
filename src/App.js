@@ -1,10 +1,15 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
 import './App.css';
-import ButtonDesign from './components/ButtonDesign';
-import Card from './components/Card';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import HomeScrollDown from './components/HomeScrollDown';
+import Home from './pages/HomePage';
+import Admin from './pages/Admin';
 
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate
+} from "react-router-dom";
 
 function App() {
   //STATE
@@ -13,14 +18,13 @@ function App() {
 
   //RENDER
   return (
-    <div className="App">
-      <HomeScrollDown/>
-      <Header/>
-      <ButtonDesign color='secondary' value='text aléatoire'/>
-      <ButtonDesign color='primary' value='Panier'/>
-      <Card title='fauteuil Louis XVI' price='79' type='fauteuil' description="voici un magnifique fauteuil non genré achetez-le"/>
-      <Footer/>
-    </div>
+    <Router>
+      <div className="App">
+      <Routes>
+      <Route path='/admin' element={ <Admin/> }/>
+      </Routes>   
+      </div>
+    </Router>
   );
 }
 
