@@ -14,3 +14,12 @@
     justify-content: flex-start;
     height: 100%;
 }
+
+/* div {
+    width: min-content;
+} */
+
+#copyright {
+    position: left;
+}
+

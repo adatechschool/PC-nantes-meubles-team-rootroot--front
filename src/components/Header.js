@@ -1,5 +1,5 @@
 import "./Header.css";
-import logo from "../assets/logo.png";
+import logo from "../assets/kalaxy_logo_icon.svg";
 import { Link } from 'react-router-dom';
 
 const Header = () => {

@@ -1,6 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-router-dom';
 import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import Home from './pages/HomePage';
 import Admin from './pages/Admin';
 import Cart from './pages/Cart';
@@ -12,10 +13,10 @@ import {
   BrowserRouter as Router,
   Route,
   Routes,
-  Navigate
+  Navigate,
 } from "react-router-dom";
 
-function App() {
+function App() { 
   //STATE
 
   //COMPORTEMENTS
