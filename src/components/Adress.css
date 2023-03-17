@@ -1,0 +1,28 @@
+.adress-user {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    gap:10px;
+}
+
+.input-adress {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 15px;
+}
+
+.adress-user h1 {
+   text-align: left;
+}
+
+input {
+    border-radius: 5px;
+    border-color: #DCC0A7;
+    height: 25px;
+}
+
+.adress-enter input{
+   width: 380px;
+}
+

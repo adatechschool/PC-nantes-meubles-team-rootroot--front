@@ -26,10 +26,11 @@ function App() {
         <Routes>
           <Route path='/admin' element={ <Admin/> }/>
           <Route path='/' element={ <Home/> }/>
+          <Route path='/' element={ <Home/> }/>
           <Route path='/login' element={ <Login/> }/>
           <Route path='/product' element={ <Product/> }/>
-          <Route path='/cart' element={ <Cart/> }/>
-        </Routes>   
+          <Route path='/cart' className="cart" element={ <Cart/> }/>
+        </Routes> 
       </div>
     </Router>
   );
