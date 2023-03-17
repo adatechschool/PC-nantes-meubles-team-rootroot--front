@@ -14,7 +14,7 @@ const Product = (props) => {
     const priceProduct = props.price; 
 
     return (
-        <div className='container'>
+        <div>
             <Header/>
             <div className="containerDetailsProduct">
                 <Carroussel />

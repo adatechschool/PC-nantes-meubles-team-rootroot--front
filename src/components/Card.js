@@ -1,6 +1,6 @@
 import "./Card.css";
 import meuble from "../assets/meuble.png";
-import icon from "../assets/iconplus.png";
+import icon from "../assets/plus.svg";
 import { Link } from 'react-router-dom';
 
 //composant "Card" complet
@@ -22,7 +22,7 @@ function Card(props) {
         </div>  
 
         <div className="description">
-          <h1 className="titleDescript">{title}</h1>
+          <h2 className="titleDescript">{title}</h2>
 
           <div className="descrip-button">
             <p className="paraphDescript">
