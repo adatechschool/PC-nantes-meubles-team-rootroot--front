@@ -9,7 +9,6 @@ const ButtonDesign = (props) => {
     return (
         <div>
             <button id="button" class={color} value={value}>{value}</button>
-            <button id="button" class="secondary">Second bouton</button>
         </div>
     );
 };

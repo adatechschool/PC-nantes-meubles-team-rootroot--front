@@ -2,15 +2,18 @@ import React from 'react';
 import ButtonDesign from '../components/ButtonDesign';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-
+import ProductCart from '../components/ProductCart';
+import TotalCart from '../components/TotalCart';
+import Adress from '../components/Adress';
 
 const Cart = () => {
 
     return (
         <div className='container'>
             <Header/>
-            <ButtonDesign color='secondary' value='text aléatoire'/>
-            <ButtonDesign color='primary' value='Panier'/>
+            <ProductCart title="Fauteuil vintage" color="vert sapin" price="79"/>
+            <TotalCart price="79"/>
+            <Adress/>
             <Footer/>
         </div>
     );
