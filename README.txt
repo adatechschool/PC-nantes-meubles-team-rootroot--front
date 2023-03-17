@@ -11,6 +11,8 @@ Architecture :
 Dossier Components : contient les différents éléments des différentes pages (boutons, card, header, footer...)
 Dossier Pages : contient les composants globaux des pages (un composant pour une page)
 Dossier Assets : contient les images, svg. 
+Fichier App.js : là où tout est appelé. 
+Fichier App.css : style global du site, sinon chaque composant à son propre css. 
 
 Comment ça marche React ? 
 
