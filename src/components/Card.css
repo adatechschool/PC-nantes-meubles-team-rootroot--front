@@ -1,42 +1,28 @@
 .completeCard {
-    display: flex;
-    height: 490px;
-    width: 396px;
+    display: inline-flex;
+    width: 360px;
     border-radius: 45px;
     flex-direction: column;
     position: relative;
 }
 
 .pictureMeuble {
-    width: 100%;
-    height: 70%;
-    border-radius: 45px 45px 0px 0px;
+border-radius: 45px 45px 0px 0px;
 }
 
 .bottomCard {
     background-color: #DCC0A7;
     border-radius: 0px 0px 45px 45px;
-
 }
 
 .description {
     display: flex;
-    flex-direction: column;
-    width: 396px;
-    height: 151px;
-    
-    padding: 25px 20px 0px 20px;
+    flex-direction: column;    
+    padding: 25px;
     text-align: left;
 }
 
-.titleDescript {
-    margin: 0px;
-}
-
 .paraphDescript {
-    height: 54px;
-    width: 100%;
-    margin: 0px;
     font-size: 17px;
     font-family: 'Inter';
     font-style: normal;
@@ -55,10 +41,9 @@
     display: flex;
     width: 116px;
     height: 73px;
-    margin: 0px;
     position: absolute;
-    left: 250px;
-    bottom: 115px;
+    right: 30px;
+    bottom: 90px;
 }
 
 
@@ -70,3 +55,9 @@
     font-weight: bold; 
 }
 
+.iconplus {
+    background-color: #fff;
+    border-radius: 50px;
+    padding: 10px;
+
+}

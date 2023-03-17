@@ -8,12 +8,27 @@ import HomeScrollDown from '../components/HomeScrollDown';
 const Home = () => {
 
     return (
-        <div className='container'>
+        <div>
             <HomeScrollDown/>
-            <Header/>
-            <ButtonDesign color='secondary' value='text aléatoire'/>
-            <ButtonDesign color='primary' value='Panier'/>
-            <Card title='fauteuil Louis XVI' price='79' type='fauteuil' description="voici un magnifique fauteuil non genré achetez-le"/>
+            <section className='content' id='content'>
+                <Header/>
+                <div className='container'>
+                    <ButtonDesign color='secondary' value='text aléatoire'/>
+                    <ButtonDesign color='primary' value='Panier'/>
+                    <h1>Tous nos produits</h1>
+                    <div className='cards'>
+                        <Card title='fauteuil Louis XVI' price='79' type='fauteuil' description="voici un magnifique fauteuil non genré achetez-le"/>
+                        <Card title='fauteuil Louis XVI' price='79' type='fauteuil' description="voici un magnifique fauteuil non genré achetez-le"/>
+                        <Card title='fauteuil Louis XVI' price='79' type='fauteuil' description="voici un magnifique fauteuil non genré achetez-le"/>
+                        <Card title='fauteuil Louis XVI' price='79' type='fauteuil' description="voici un magnifique fauteuil non genré achetez-le"/>
+                        <Card title='fauteuil Louis XVI' price='79' type='fauteuil' description="voici un magnifique fauteuil non genré achetez-le"/>
+                        <Card title='fauteuil Louis XVI' price='79' type='fauteuil' description="voici un magnifique fauteuil non genré achetez-le"/>
+                        <Card title='fauteuil Louis XVI' price='79' type='fauteuil' description="voici un magnifique fauteuil non genré achetez-le"/>
+                        <Card title='fauteuil Louis XVI' price='79' type='fauteuil' description="voici un magnifique fauteuil non genré achetez-le"/>
+                        <Card title='fauteuil Louis XVI' price='79' type='fauteuil' description="voici un magnifique fauteuil non genré achetez-le"/>
+                    </div>
+                </div>
+            </section>
             <Footer/>
         </div>
     );

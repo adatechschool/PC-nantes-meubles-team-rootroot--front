@@ -8,8 +8,8 @@ const ButtonDesign = (props) => {
     //RENDER
     return (
         <div>
-            <button id="button" class={color} value={value}>{value}</button>
-            <button id="button" class="secondary">Second bouton</button>
+            <button className={`button ${color}`}  value={value}>{value}</button>
+            <button class="button secondary">Second bouton</button>
         </div>
     );
 };

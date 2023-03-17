@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 const Cart = () => {
 
     return (
-        <div className='container'>
+        <div className=''>
             <Header/>
             <ButtonDesign color='secondary' value='text aléatoire'/>
             <ButtonDesign color='primary' value='Panier'/>

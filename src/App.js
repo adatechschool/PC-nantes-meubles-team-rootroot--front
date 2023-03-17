@@ -7,7 +7,6 @@ import Cart from './pages/Cart';
 import Login from './pages/Login';
 import Product from './pages/Product';
 
-
 import {
   BrowserRouter as Router,
   Route,
@@ -26,7 +25,7 @@ function App() {
       <div className="App">
         <Routes>
           <Route path='/admin' element={ <Admin/> }/>
-          <Route path='/home' element={ <Home/> }/>
+          <Route path='/' element={ <Home/> }/>
           <Route path='/login' element={ <Login/> }/>
           <Route path='/product' element={ <Product/> }/>
           <Route path='/cart' element={ <Cart/> }/>
