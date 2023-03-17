@@ -1,6 +1,10 @@
 import './HomeScrollDown.css';
 import ScrollArrow from '../assets/scroll_arrow_2.png'
 
+function GoToContent() {
+	window.location.href='#content';
+};
+
 function HomeScrollDown() {
 	// state
 
@@ -13,7 +17,7 @@ function HomeScrollDown() {
 				<h2>kalaxy.</h2>
 				<h1>Bienvenue</h1>
 			</div>
-			<button class="arrow" onclick="window.location.href='#products'"><img src={ScrollArrow} alt="Scroll"></img></button>
+			<button class="arrow" onClick={GoToContent}><img src={ScrollArrow} alt="Scroll"></img></button>
 		</header>
 	);
 }

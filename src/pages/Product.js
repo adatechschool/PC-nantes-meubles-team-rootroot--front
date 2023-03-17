@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 const Product = () => {
 
     return (
-        <div className='container'>
+        <div>
             <Header/>
             <ButtonDesign color='secondary' value='text aléatoire'/>
             <ButtonDesign color='primary' value='Panier'/>
