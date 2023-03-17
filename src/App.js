@@ -6,7 +6,6 @@ import Admin from './pages/Admin';
 import Cart from './pages/Cart';
 import Login from './pages/Login';
 import Product from './pages/Product';
-import Footer from './components/Footer'
 
 import {
   BrowserRouter as Router,
@@ -26,6 +25,7 @@ function App() {
       <div className="App">
         <Routes>
           <Route path='/admin' element={ <Admin/> }/>
+          <Route path='/' element={ <Home/> }/>
           <Route path='/' element={ <Home/> }/>
           <Route path='/login' element={ <Login/> }/>
           <Route path='/product' element={ <Product/> }/>

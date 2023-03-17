@@ -9,7 +9,7 @@ import Adress from '../components/Adress';
 const Cart = () => {
 
     return (
-        <div className='container'>
+        <div className=''>
             <Header/>
             <ProductCart title="Fauteuil vintage" color="vert sapin" price="79"/>
             <TotalCart price="79"/>

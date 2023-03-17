@@ -1,4 +1,4 @@
-#button {
+.button {
     border-radius: 42px;
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
@@ -18,7 +18,7 @@
 .primary {
     background: #ff5c00;
     color: #ffffff;
-    border-style: none;
+    border: 2px solid #ff5c00;
 } 
 
 .secondary {

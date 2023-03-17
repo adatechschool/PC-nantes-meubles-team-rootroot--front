@@ -1,9 +1,32 @@
-.App {
-  text-align: center;
+body { 
+	background-color: #fefefe;
 }
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
 
+h1 {
+    font-family: Gloock, serif;
+    letter-spacing: 1px;
+    font-weight: normal;
+    font-size: 2.5rem;
+    color: #1E1E1E;
+    margin-bottom: 30px;
+}
 
+.container {
+    max-width: 1220px;
+    margin: auto;
+    padding: 30px;
+}
 
-
-
+.cards {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 45px;
+}
