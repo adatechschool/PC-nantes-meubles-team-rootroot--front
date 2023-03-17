@@ -1,16 +1,20 @@
 import React from 'react';
-import ButtonDesign from './../components/ButtonDesign';
 import Header from '../components/Header';
+import ButtonDesign from './../components/ButtonDesign';
 import Footer from '../components/Footer';
 
+//Ici on appele le tableau crée:
+import AdminTable from '../components/AdminTable';
 
+//Ici on réuni ensemble les composants de la page
 const Admin = () => {
-
+    
     return (
         <div>
             <Header/>
-            <ButtonDesign color='secondary' value='text aléatoire'/>
-            <ButtonDesign color='primary' value='Panier'/>
+            <ButtonDesign color='secondary' value='supprimer un article'/>
+            <ButtonDesign color='secondary' value='modifier un article'/>
+            <AdminTable/>
             <Footer/>
         </div>
     );
