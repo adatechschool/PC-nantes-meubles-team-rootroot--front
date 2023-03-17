@@ -1,16 +1,30 @@
 .footer {
-    width: 100%;
-    height: 100px;
     background-color: #a48468;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
     display: flex;
-    
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px 15px 30px;
 }
 
 .footer .logo {
-    justify-content: flex-start;
-    height: 100%;
+    width: 120px;
+}
+
+.footer-menu {
+    display: inline-flex;
+    gap: 40px;
+}
+
+.footer-links {
+    color: #fff;
+    text-decoration: none;
+}
+
+.social {
+    display: inline-flex;
+    gap: 40px;
+}
+
+.social img {
+    height: 25px;
 }
