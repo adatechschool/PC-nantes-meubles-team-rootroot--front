@@ -8,6 +8,13 @@ body {
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+.containerDetailsProduct {
+  padding: 2em;
+  display: flex;
+  width: 90%;
+  margin:auto;
+  padding: 3em;
+}
 
 h1 {
     font-family: Gloock, serif;
@@ -16,6 +23,9 @@ h1 {
     font-size: 2.5rem;
     color: #1E1E1E;
     margin-bottom: 30px;
+}
+.carroussel img {
+  border-radius: 45px;
 }
 
 .container {
@@ -29,4 +39,22 @@ h1 {
     gap: 40px;
     flex-wrap: wrap;
     margin-bottom: 45px;
+}
+.boxInfos {
+  display:flex;
+  flex-direction: column;
+  margin-left: 1em;
+  height: 100%;
+  justify-content: space-between;
+  gap: 20px;
+}
+.boxInfos h2 {
+  font-family: 'Gloock';
+  font-size:32px;
+  color: #ff5c00;
+}
+
+.footerInfos {
+  display: flex;
+  width: 100%;
 }
