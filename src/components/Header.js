@@ -3,36 +3,53 @@ import logo from "../assets/kalaxy_logo_icon.svg";
 import { Link } from 'react-router-dom';
 
 const Header = () => {
+{/* 
+    const { isAuthenticated } = useContext(Auth); 
+*/}
 
     return (
         <nav className='header'>
             <Link to='/'><img src={logo} alt="logo" className="logo" /></Link>
             <ul className="header-menu">
             <Link
-                to='/categories'
-                className='header-links'            
-                >
-                Catégories
-            </Link>
-            <Link
-                to='/tousnosproduits'
+                to='/'
                 className='header-links'            
                 >
                 Tous nos produits
             </Link>                    
             <Link
-                to='/panier'
+                to='/cart'
                 className='header-links'            
                 >
                 Panier
             </Link>                    
-            <Link
-                to='/login'
-                className='header-links'            
-                >
-                Login
-            </Link>
-            </ul>
+                                {/*{ (!isAuthenticated && (
+                        <>*/}
+                        <Link
+                            to='/login'
+                            className='header-links'            
+                            >
+                            Se connecter
+                        </Link>
+                        {/*<Link
+                            to='/register'
+                            className='register'            
+                            >
+                            S'enregistrer
+                        </Link>
+                        </>
+                    )) || (
+                        <>
+                            <Link
+                                to='/account'
+                                className='account'            
+                                >
+                                Mon compte
+                            </Link>
+                        </>
+                    )}
+                    */}
+                </ul>
         </nav>
     );
 }
