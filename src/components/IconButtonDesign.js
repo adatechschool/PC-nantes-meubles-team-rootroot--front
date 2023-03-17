@@ -1,6 +1,7 @@
-import './ButtonDesign.css';
+import './IconButtonDesign.css';
+import basket from '../assets/basket.svg';
 
-const ButtonDesign = (props) => {
+const IconButtonDesign = (props) => {
 
     const color = props.color;
     const value = props.value;
@@ -9,10 +10,11 @@ const ButtonDesign = (props) => {
     return (
         <div>
             <button id="button" class={color} value={value}>
+                <img src={basket} alt='logo panier' className='svg'></img>
                 {value}
             </button>
         </div>
     );
 };
 
-export default ButtonDesign;
+export default IconButtonDesign;

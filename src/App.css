@@ -1,38 +1,54 @@
-.App {
-  text-align: center;
-}
+/*   CSS DE LA PAGE PRODUCT     */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.containerDetailsProduct {
+  padding: 2em;
   display: flex;
+  width: 90%;
+  margin:auto;
+  padding: 3em;
+}
+
+.carroussel img {
+  border-radius: 45px;
+}
+
+.footer {
+  width: 100%;
+  height: 100px;
+  background-color: #a48468;
+  line-height: 100px;
+  display: flex;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.footer .logo {
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.footer .socials {
+  height: 50%;
+}
+
+.boxInfos {
+  display:flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-left: 1em;
+  height: 100%;
+  justify-content: space-between;
+  gap: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.boxInfos h2 {
+  font-family: 'Gloock';
+  font-size:32px;
+  color: #ff5c00;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footerInfos {
+  display: flex;
+  width: 100%;
 }
