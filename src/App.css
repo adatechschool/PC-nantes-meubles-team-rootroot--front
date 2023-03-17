@@ -1,38 +1,60 @@
-.App {
-  text-align: center;
+body { 
+	background-color: #fefefe;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.containerDetailsProduct {
+  padding: 2em;
   display: flex;
+  width: 90%;
+  margin:auto;
+  padding: 3em;
+}
+
+h1 {
+    font-family: Gloock, serif;
+    letter-spacing: 1px;
+    font-weight: normal;
+    font-size: 2.5rem;
+    color: #1E1E1E;
+    margin-bottom: 30px;
+}
+.carroussel img {
+  border-radius: 45px;
+}
+
+.container {
+    max-width: 1220px;
+    margin: auto;
+    padding: 30px;
+}
+
+.cards {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 45px;
+}
+.boxInfos {
+  display:flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-left: 1em;
+  height: 100%;
+  justify-content: space-between;
+  gap: 20px;
+}
+.boxInfos h2 {
+  font-family: 'Gloock';
+  font-size:32px;
+  color: #ff5c00;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footerInfos {
+  display: flex;
+  width: 100%;
 }

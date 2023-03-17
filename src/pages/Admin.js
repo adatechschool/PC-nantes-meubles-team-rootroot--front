@@ -10,7 +10,7 @@ import AdminTable from '../components/AdminTable';
 const Admin = () => {
     
     return (
-        <div className='adminPage'>
+        <div>
             <Header/>
             <ButtonDesign color='secondary' value='supprimer un article'/>
             <ButtonDesign color='secondary' value='modifier un article'/>

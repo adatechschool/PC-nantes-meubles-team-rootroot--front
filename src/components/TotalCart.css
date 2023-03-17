@@ -1,0 +1,14 @@
+.total-cart {
+    font-family: 'Inter';
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#price-total {
+    color: #E47727;
+    font-size: 60px;
+    font-weight: bold;
+    margin-top: 10px;
+}
