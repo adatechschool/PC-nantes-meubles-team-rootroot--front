@@ -12,13 +12,13 @@ const Footer = () => {
                         
             <ul className="footer-menu">
             <Link
-                to='/tousnosproduits'
+                to='/'
                 className='footer-links'            
                 >
                 Tous nos produits
             </Link>                    
             <Link
-                to='/panier'
+                to='/cart'
                 className='footer-links'            
                 >
                 Panier
