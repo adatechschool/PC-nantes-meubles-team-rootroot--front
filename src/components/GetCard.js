@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import Card from './Card';
+import React, { useState, useEffect } from "react";
+import Card from "./Card";
 
 function GetCard() {
   const [data, setData] = useState([]);
@@ -23,13 +23,11 @@ function GetCard() {
       }
     }
     fetchData();
-
   }, []);
 
   return (
-    <div className="Appi">
-        
-    {data.slice(0, 9).map((item) => (
+    <React.Fragment>
+      {data.slice(0, 9).map((item) => (
         <Card
           key={item.id}
           title={item.title}
@@ -37,10 +35,9 @@ function GetCard() {
           description={item.description}
           category={item.category}
           id={item.id}
-        
         />
       ))}
-    </div>
+    </React.Fragment>
   );
 }
 
