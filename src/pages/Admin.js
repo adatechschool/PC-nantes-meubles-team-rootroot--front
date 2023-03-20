@@ -6,9 +6,9 @@ import Footer from '../components/Footer';
 //Ici on appele le tableau crée:
 import AdminTable from '../components/AdminTable';
 
-//Ici on réuni ensemble les composants de la page
-const Admin = () => {
-    
+//Ici on réunit ensemble les composants de la page
+
+const Admin = () =>{
     return (
         <div>
             <Header/>
@@ -19,5 +19,5 @@ const Admin = () => {
         </div>
     );
 }
-
+    
 export default Admin;

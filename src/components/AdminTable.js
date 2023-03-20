@@ -10,74 +10,53 @@ import "./AdminTable.css";
 //modifier ou supprimer des articles selon ses ventes
 //ATTENTION: le tableau est fait, il faut faire les appels de la BdD
 
-class AdminTable extends React.Component{
+function AdminTable() {
+    const [data, setData] = React.useState([]);
 
-    constructor(props){
-        super(props);
-
-        //Ici c'est pour faire l'appel de l'API
-        this.state = {
-            product: [
-                {'id':1, 
-                'title': 'Table', 
-                'description':'Round Coffee Table. 40cm high.', 
-                'price':'99€', 
-                'color':'Light-Brown', 
-                'material':'wood', 
-                'picture': 'img src="../assets/brown-table.jpg"',
-                'options': 'Modify Delete'
-                },
-
-                {'id':2, 
-                'title': 'Chair', 
-                'description':'Nice chair. 50cm high.', 
-                'price':'40€', 
-                'color':'Black', 
-                'material':'metal', 
-                'picture': 'img src="../assets/black-chair.jpg"',
-                'options': 'Modify Delete'
-                },
-            ]
-        }
-    }
-
-    render(){
-        return (
+    React.useEffect(() => {
+        fetch("http://localhost:8000/get_all_data_meuble")
+            .then(response => response.json())
+            .then(res => setData(res))
+            
+            .catch(error => console.log(error));    
+      }, []);
+      
+    return (
             //Ici c'est la création du tableau et son style//
         <Table striped bordered hover variant="dark">
             <thead>
                 <tr>
                     <th>Id</th>
+                    <th>Category</th>
                     <th>Title</th>
                     <th>Description</th>
                     <th>Price</th>
                     <th>Color</th>
                     <th>Material</th>
                     <th>Picture</th>
-                    <th>Options</th>
+                    <th>Dimension</th>
                 </tr>
             </thead>
 
             <tbody>            
-                {/* Ici ce sont les appels 'props' */}
-                {
-                    this.state.AdminTable.map((AdminTable) => 
-                        <tr>
-                            <td> {AdminTable.id} </td>
-                            <td> {AdminTable.title} </td>
-                            <td> {AdminTable.description} </td>
-                            <td> {AdminTable.price} </td>
-                            <td> {AdminTable.color} </td>
-                            <td> {AdminTable.material} </td>
-                            <td> {AdminTable.picture} </td>
-                            <td> {AdminTable.options} </td>
+                {data && data.map(meuble => (
+                        <tr >
+                            <td> {meuble.id} </td>
+                            <td> {meuble.category} </td>
+                            <td> {meuble.title}</td>
+                            <td> {meuble.description} </td>
+                            <td> {meuble.price} </td>
+                            <td> {meuble.color} </td>
+                            <td> {meuble.material} </td>
+                            <td> {meuble.picture} </td>
+                            <td> {meuble.dimension} </td>
                         </tr>
-                    )
-                }
+                
+                    ))}
             </tbody>
         </Table>
-        )
-    }
+    )
+    
 }
 
 export default AdminTable;
