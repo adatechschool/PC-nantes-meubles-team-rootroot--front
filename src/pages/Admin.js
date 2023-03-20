@@ -12,9 +12,9 @@ const Admin = () =>{
     return (
         <div>
             <Header/>
-            <ButtonDesign color='secondary' value='supprimer un article'/>
-            <ButtonDesign color='secondary' value='modifier un article'/>
+            <div className='table'>
             <AdminTable/>
+            </div>
             <Footer/>
         </div>
     );

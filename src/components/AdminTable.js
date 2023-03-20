@@ -1,5 +1,5 @@
 import React from "react";
-
+import ButtonDesign from "./ButtonDesign";
 //Le tableau de l'Administrateur a été crée avec Bootstrap:
 import Table from 'react-bootstrap/Table';
 
@@ -23,7 +23,7 @@ function AdminTable() {
       
     return (
             //Ici c'est la création du tableau et son style//
-        <Table striped bordered hover variant="dark">
+        <Table className="table" striped bordered hover variant="dark">
             <thead>
                 <tr>
                     <th>Id</th>
@@ -35,6 +35,8 @@ function AdminTable() {
                     <th>Material</th>
                     <th>Picture</th>
                     <th>Dimension</th>
+                    <th>Modifier</th>
+                    <th>Supprimer</th>
                 </tr>
             </thead>
 
@@ -50,6 +52,8 @@ function AdminTable() {
                             <td> {meuble.material} </td>
                             <td> {meuble.picture} </td>
                             <td> {meuble.dimension} </td>
+                            <td><ButtonDesign className="boutonadmin" color='secondary' value='modifier'/></td>
+                            <td><ButtonDesign className="boutonadmin" color='secondary' value='supprimer'/></td>
                         </tr>
                 
                     ))}
