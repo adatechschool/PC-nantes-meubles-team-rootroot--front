@@ -14,12 +14,16 @@ function AdminTable() {
   const [data, setData] = React.useState([]);
 
   React.useEffect(() => {
+    getMeubles();
+  }, []);
+
+  function getMeubles() {
     fetch("http://127.0.0.1:8000/get_all_card_meuble")
       .then((response) => response.json())
       .then((res) => setData(res))
 
       .catch((error) => console.log(error));
-  }, []);
+  }
 
   function deleteMeuble(id) {
     alert(`Are you sure you wanna delete meuble with id ${id}`);
@@ -28,6 +32,7 @@ function AdminTable() {
     }).then((result) => {
       result.json().then((resp) => {
         console.warn(resp);
+        getMeubles();
       });
     });
   }
