@@ -30,7 +30,7 @@ const Footer = () => {
                 Login
             </Link>
             </ul>
-
+            <p className="footer-menu">Votre magasin Kalaxy. 18 route de la redoute 97400 St Denis </p>
             <div className="social">
                 <img src={facebook} alt="logo facebook"></img>
                 <img src={instagram} alt="logo instagram"></img>
