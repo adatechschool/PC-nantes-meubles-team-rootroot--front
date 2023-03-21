@@ -13,6 +13,7 @@
 .footer-menu {
     display: inline-flex;
     gap: 40px;
+    margin-bottom: 0px;
 }
 
 .footer-links {
