@@ -17,6 +17,7 @@ function AdminTable() {
     getMeubles();
   }, []);
 
+  // gets all the meubles this function called twice. Once in the beginning and second time when you delete. it may be againg called when put method will be written
   function getMeubles() {
     fetch("http://127.0.0.1:8000/get_all_card_meuble")
       .then((response) => response.json())
@@ -25,6 +26,7 @@ function AdminTable() {
       .catch((error) => console.log(error));
   }
 
+  // Deletes the selected meuble
   function deleteMeuble(id) {
     alert(`Are you sure you wanna delete meuble with id ${id}`);
     fetch(`http://127.0.0.1:8000/delete_meuble/${id}`, {
@@ -78,6 +80,7 @@ function AdminTable() {
               </td>
               <td>
                 <ButtonDesign
+                // adds event listener and on click deletes the meuble accordinng the ID 
                   onClick={() => deleteMeuble(meuble.id)}
                   className="boutonadmin"
                   color="secondary"
