@@ -1,3 +1,4 @@
+import React from 'react';
 import meuble from "../assets/meuble.png";
 
 const Carroussel = () => {

@@ -1,3 +1,4 @@
+import React from 'react';
 import './HomeScrollDown.css';
 import ScrollArrow from '../assets/scroll_arrow_2.png'
 

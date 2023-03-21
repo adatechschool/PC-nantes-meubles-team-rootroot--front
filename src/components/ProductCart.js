@@ -1,3 +1,4 @@
+import React from 'react';
 import "./ProductCart.css";
 import { Link } from 'react-router-dom';
 import meuble from "../assets/meuble.png";

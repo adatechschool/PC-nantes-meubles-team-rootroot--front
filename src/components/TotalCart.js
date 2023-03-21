@@ -1,3 +1,4 @@
+import React from 'react';
 import "./TotalCart.css";
 import { Link } from 'react-router-dom';
 import Button from './ButtonDesign';

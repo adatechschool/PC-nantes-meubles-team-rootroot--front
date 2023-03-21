@@ -1,3 +1,4 @@
+import React from 'react';
 import "./Footer.css";
 import logo from "../assets/kalaxy_logo_text_white.svg";
 import facebook from "../assets/facebook.svg";

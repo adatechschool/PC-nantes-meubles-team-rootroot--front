@@ -3,3 +3,7 @@
 export function hasAuthenticated() {
     return false;
 }
+
+export function login() {
+    
+}
