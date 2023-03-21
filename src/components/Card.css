@@ -29,7 +29,7 @@ border-radius: 45px 45px 0px 0px;
     font-style: normal;
 }
 
-.type {
+.category {
     font-weight: bold;
 }
 
@@ -41,10 +41,10 @@ border-radius: 45px 45px 0px 0px;
 .price {
     display: flex;
     width: 116px;
-    height: 73px;
-    position: absolute;
-    right: 30px;
-    bottom: 90px;
+    height: 0px;
+    position: relative;
+    left: 200px;
+    bottom: 45px;
 }
 
 
