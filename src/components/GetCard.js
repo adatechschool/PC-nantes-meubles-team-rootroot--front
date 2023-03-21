@@ -35,6 +35,7 @@ function GetCard() {
           description={item.description}
           category={item.category}
           id={item.id}
+          picture = {item.picture}
         />
       ))}
     </React.Fragment>

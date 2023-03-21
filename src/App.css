@@ -24,6 +24,19 @@ h1 {
     color: #1E1E1E;
     margin-bottom: 30px;
 }
+.allProducts{
+  width: 645px;
+  height: 90px;
+  font-family: 'Gloock';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 75px;
+  line-height: 90px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+  color: #1E1E1E;
+}
 .carroussel img {
   border-radius: 45px;
 }
@@ -31,7 +44,7 @@ h1 {
 .container {
     max-width: 1220px;
     margin: auto;
-    padding: 30px;
+    padding: 3px;
 }
 
 .cards {
@@ -39,6 +52,7 @@ h1 {
     gap: 40px;
     flex-wrap: wrap;
     margin-bottom: 45px;
+    justify-content: space-between;
 }
 .boxInfos {
   display:flex;
