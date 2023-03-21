@@ -1,15 +1,15 @@
 import "./ProductCart.css";
-import { Link } from 'react-router-dom';
 import meuble from "../assets/meuble.png";
 import Button from '../components/ButtonDesign';
 
 
+
 function ProductCart(props) {
 
-    const title = props.title;
-    const price = props.price;
-    const color = props.color;
-  
+  const {title,color, price} = props
+
+    console.log ('affichage')
+
   return (
     <div className="product-cart">
 
@@ -18,7 +18,6 @@ function ProductCart(props) {
         <div className="picture-meuble">
           <img src={meuble} alt="meuble" className="pictureMeuble" />
         </div>
-
         <div className="details-product">
           <h1>{title}</h1>
           <p>couleur: {color}</p>

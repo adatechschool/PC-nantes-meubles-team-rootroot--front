@@ -6,6 +6,7 @@ function GetCard() {
 
   useEffect(() => {
     async function fetchData() {
+      console.log('coucou')      
       try {
         const response = await fetch(
           "http://127.0.0.1:8000/get_all_card_meuble"
