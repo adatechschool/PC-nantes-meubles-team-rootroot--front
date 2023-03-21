@@ -1,17 +1,18 @@
-import './ButtonDesign.css';
+import "./ButtonDesign.css";
 
 const ButtonDesign = (props) => {
+  const color = props.color;
+  const value = props.value;
+  const onClick = props.onClick;
 
-    const color = props.color;
-    const value = props.value;
-
-    //RENDER
-    return (
-        <div>
-            <button className={`button ${color}`}  value={value}>{value}</button>
-            
-        </div>
-    );
+  //RENDER
+  return (
+    <div>
+      <button className={`button ${color}`} value={value} onClick={onClick}>
+        {value}
+      </button>
+    </div>
+  );
 };
 
 export default ButtonDesign;
