@@ -20,8 +20,7 @@ function ProductCart(props) {
         </div>
         <div className="details-product">
           <h1>{title}</h1>
-          <p>couleur: {color}</p>
-          <p>Quantité: 1</p> 
+          <p>couleur: {color}</p> 
           <p id="price">Prix: <span id="price-product">{price}€</span></p>
         </div>
 

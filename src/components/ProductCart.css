@@ -1,10 +1,11 @@
 .bodycartpage{
     display: flex;
-    padding: 1em 1em 1em;
+    justify-content: space-between;
+    padding: 3em 1em
 }
 
 .flower{
-    width: 25%;
+    opacity: 0.33;
     height: 500px;
     transform: scaleX(-1);
 }
@@ -17,29 +18,34 @@
     border: 2px solid #E47727;
     border-radius: 45px 45px 45px 45px;
     width: 75%;
-    height: 308px;
+    height: 250px;
+    margin: auto auto 2em;
+    
 }
 
 .complete-elements {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    justify-content: space-around;
     height: 100%;
 }
 
 .picture-meuble img {
-    width: 150px;
-    height: 150px;
+    
+    height: 170px;
+    width: 170px;
     border-radius: 30px;
 }
+ .picture-meuble {
+    margin: auto;
+ }
 
-.picture-meuble {
-   margin-left: 50px;
-   margin-right: 50px;
-}
 
 .details-product h1 {
     color: #E47727;
+    font-size: x-large;
+    padding-top: 20px;
+    padding-right: 30px;
 }
 
 .details-product {
@@ -68,7 +74,5 @@
     display: flex;
     flex-direction: column;
     gap: 25px;
-    margin-left: 200px;
-    margin-top: 90px;
 }
 
