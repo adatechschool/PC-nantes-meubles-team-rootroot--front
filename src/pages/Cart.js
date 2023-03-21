@@ -4,17 +4,23 @@ import Footer from '../components/Footer';
 import TotalCart from '../components/TotalCart';
 import Adress from '../components/Adress';
 import GetProductCart from '../components/GetProductCart';
+import flower from "../assets/flowers.svg";
 
 const Cart = () => {
 
     return (
-        <div className=''>
-            <Header/>
-            <GetProductCart/>
-            <TotalCart price="79"/>
-            <Adress/>
-            <Footer/>
-        </div>
+        <>
+        <Header/>
+        <div className='bodycartpage'>  
+            <img className='flower' src={flower} alt='fleur'/>
+            <div className='cartcontainer'>
+                <GetProductCart/>
+                <TotalCart price="79"/>
+                <Adress/>
+            </div>
+        </div> 
+        <Footer/>
+        </>
     );
 }
 
