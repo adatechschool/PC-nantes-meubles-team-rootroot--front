@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 // import TotalCart from '../components/TotalCart';
-import Adress from '../components/Adress';
+// import Adress from '../components/Adress';
 import GetProductCart from '../components/GetProductCart';
 import flower from "../assets/flowers.svg";
 
