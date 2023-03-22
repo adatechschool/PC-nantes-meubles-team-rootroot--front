@@ -27,7 +27,7 @@ function AdminTable() {
 
   // gets all the meubles this function called twice. Once in the beginning and second time when you delete. it may be againg called when put method will be written
   function getMeubles() {
-    fetch("http://127.0.0.1:8000/get_all_card_meuble")
+    fetch("http://127.0.0.1:8000/get_all_meuble")
       .then((response) => response.json())
       .then((res) => {
         console.log(res);
