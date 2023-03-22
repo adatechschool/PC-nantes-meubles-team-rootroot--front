@@ -3,7 +3,6 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import HomeScrollDown from "../components/HomeScrollDown";
 import GetCard from "../components/GetCard";
-
 const Home = () => {
   return (
     <div>
