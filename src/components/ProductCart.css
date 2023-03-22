@@ -73,6 +73,7 @@
 .button-product {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    justify-content: space-evenly;
+    padding-right: 10px;
 }
 
