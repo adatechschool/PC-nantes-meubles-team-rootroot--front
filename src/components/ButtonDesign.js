@@ -11,6 +11,7 @@ const ButtonDesign = (props) => {
       <button className={`button ${color}`} value={value} onClick={onClick}>
         {value}
       </button>
+
     </div>
   );
 };

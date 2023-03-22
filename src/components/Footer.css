@@ -1,5 +1,6 @@
 .footer {
     background-color: #a48468;
+    color:#fff;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -13,6 +14,7 @@
 .footer-menu {
     display: inline-flex;
     gap: 40px;
+    margin-bottom: 0px;
 }
 
 .footer-links {
