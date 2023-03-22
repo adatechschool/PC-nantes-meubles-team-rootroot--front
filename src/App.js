@@ -7,6 +7,7 @@ import Admin from './pages/Admin';
 import Cart from './pages/Cart';
 import Login from './pages/Login';
 import Product from './pages/Product';
+import Registration from './pages/Registration';
 //import { hasAuthenticated } from './services/AuthApi';
 
 import {
@@ -33,6 +34,8 @@ function App() {
           <Route path='/login' element={ <Login/> }/>
           <Route path={`/product/:id`} element={ <Product name="fauteeeeeil"/> }/>
           <Route path='/cart' element={ <Cart/> }/>
+          <Route path='/registration' element={ <Registration/> }/>
+
         </Routes>   
       </div>
     </Router> 

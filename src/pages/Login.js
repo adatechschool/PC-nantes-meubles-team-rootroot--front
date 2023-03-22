@@ -13,7 +13,7 @@ import { login } from "../services/AuthApi";
   // utilisateurs enregistrés de la BDD (et éventuellement le statut admin/user)
   const [user, setUser] = useState({
     username: "",
-    password: ""
+    password: "" 
   })
   
   // Vérifie que les champs des formulaires ne sont pas nuls
@@ -67,7 +67,7 @@ import { login } from "../services/AuthApi";
             <div className="form-group">
                 <label htmlFor="password">Password</label>
                 <input
-                type="hidden"
+                type="password"
                 name="password"
                 className="form-control"
                 id="password"

@@ -1,4 +1,4 @@
-import { getItem, addItem, removeItem } from './LocalStorage.js';
+/*import { getItem, addItem, removeItem } from './LocalStorage.js';
 
 // Par défaut, on considère que l'utilisateur n'est pas connecté
 export function hasAuthenticated() {
@@ -57,4 +57,4 @@ function tokenIsValid(token) {
     }
 
     return false;
-}
+}*/
