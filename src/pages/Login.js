@@ -9,17 +9,22 @@ import { login } from "../services/AuthApi";
  const Login = ({ history }) => {
   const { isAuthenticated, setIsAuthenticated } = useContext(Auth);
 
+  // Initialisation des constantes user et password pour pouvoir les comparer avec les
+  // utilisateurs enregistrés de la BDD (et éventuellement le statut admin/user)
   const [user, setUser] = useState({
     username: "",
     password: ""
   })
   
+  // Vérifie que les champs des formulaires ne sont pas nuls
   const handleChange = ({currentTarget}) => {
     const { name, value } = currentTarget;
 
     setUser({...user, [name]: value})
   }
 
+  // Gère l'envoi du formulaire (clic bouton se connecter ou appui touche entrée)
+  // Si l'user est bien enregistré -> setter pour faire passer isAuthenticated à true
   const handleSubmit = async event => {
     event.preventDefault();
     console.log("formulaire envoyé");
@@ -27,15 +32,18 @@ import { login } from "../services/AuthApi";
     try {
       const response = await login(user);
       setIsAuthenticated(response);
-      history.replace('/account');
+      // ICI route URL à changer selon la page vers laquelle on veut rediriger
+      history.replace('/homepage');
     } catch ({ response }) {
       console.log(response);
     }
   }
-
+  // Conséquence du handleSubmit :
+  //vérifie que isAuthenticated est bien passé à true et affiche la page que l'on souhaite en tant qu'user connecté
   useEffect(() => {
     if (isAuthenticated) {
-      history.replace('/account');
+      // ICI route URL à changer selon la page vers laquelle on veut rediriger
+      history.replace('/homepage');
     }
   }, [history, isAuthenticated]);
 
