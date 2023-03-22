@@ -13,13 +13,13 @@ import { json } from "react-router-dom";
 
 function AdminTable() {
   const [data, setData] = React.useState([]);
+  const [id, setId] = React.useState(null);
   const [category, setCategory] = React.useState("");
   const [title, setTitle] = React.useState("");
   const [description, setDescription] = React.useState("");
   const [price, setPrice] = React.useState("");
   const [picture, setPicture] = React.useState("");
   const [dimension, setDimension] = React.useState("");
-  const [id, setId] = React.useState(null);
 
   React.useEffect(() => {
     getMeubles();
