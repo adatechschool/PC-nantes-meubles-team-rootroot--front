@@ -13,8 +13,8 @@ function TotalCart(props) {
      
       <div className="total">
         <p className="totalarticle">Total</p>
-        <p className="totalarticle">(1 article)</p>
         <p id="price-total">{price}€</p>
+        <p className="totalarticle">(1 article)</p>
       </div>
       <div className="boutoncommande">
         <Button color="primary" value="Passer commande"/>

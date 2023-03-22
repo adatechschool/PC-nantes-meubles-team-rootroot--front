@@ -37,7 +37,7 @@
     border-radius: 30px;
 }
  .picture-meuble {
-    margin: auto;
+    margin: auto 0;
  }
 
 
@@ -50,30 +50,42 @@
 
 .details-product {
     text-align: left;
-    width:  314px;
-    height: 216px;
+    width: 341.58px;
+    margin: 16px 0;
+
 }
 
 .details-product p {
     margin-top: 10px;
     font-family: 'Inter';
     font-style: normal;
-    font-size: 23px;
+    font-size: 18px;
+}
+.couleur{
+    padding-top: 30px;
 }
 
-#price {
-    margin-top: 50px;
+#price{
+    padding-top: 8px;
 }
+
 
 #price-product {
     font-size: 40px;
     font-weight: bold;
+    
 }
+
 
 .button-product {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 20px;
     padding-right: 10px;
+}
+
+.boutonmodifier{
+    margin: 0 auto;
 }
 
