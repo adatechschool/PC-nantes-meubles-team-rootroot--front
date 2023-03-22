@@ -34,15 +34,14 @@ function ProductCart(props) {
         </div>
         <div className="details-product">
           <h1>{title}</h1>
-          <p>couleur: {color}</p>
-          <p>Quantité: 1</p>
+          <p className="couleur">couleur: {color}</p>
           <p id="price">
             Prix: <span id="price-product">{price}€</span>
           </p>
         </div>
 
         <div className="button-product">
-          <Link to={`/product/${id}`}> <Button color="secondary" value="Plus de détails"></Button></Link>
+          <Link to={`/product/${id}`} className="boutonmodifier"> <Button color="secondary" value="Plus de détails"></Button></Link>
           <Button
             onClick={handleRemove}
             color="secondary"
