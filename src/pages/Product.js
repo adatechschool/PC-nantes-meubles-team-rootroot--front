@@ -2,16 +2,39 @@ import IconButtonDesign from '../components/IconButtonDesign';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Carroussel from '../components/Carroussel';
+import React, { useState, useEffect } from 'react';
+import {useParams} from 'react-router-dom';
 
-const Product = (props) => {
 
-    const nameProduct = props.name;
-    const typeProduct = props.type;
-    const descriptionProduct = props.description;
-    const dimensionsProduct = props.dimensions;
-    const textureProduct = props.texture;
-    const colorProduct = props.color;
-    const priceProduct = props.price; 
+
+const Product = () => {
+    const param = useParams();
+    const [data, setData] = useState(null);
+
+    useEffect(() => {
+        async function fetchData() {
+          try {
+            const response = await fetch(
+                `http://127.0.0.1:8000/get_meuble/${param.id}`
+            );
+            const jsonData = await response.json();
+    
+            if (!response.ok) {
+              throw new Error(
+                `This is an HTTP error: The status is ${response.status}`
+              );
+            }
+            setData(jsonData);
+          } catch (err) {
+            console.log(err.message);
+          }
+        }
+        fetchData();
+      }, []);
+
+    if (!data) {
+        return <p>Loading...</p>;
+    }
 
     return (
         <div>
@@ -20,30 +43,31 @@ const Product = (props) => {
                 <Carroussel />
                 <div className="boxInfos">
                     <h2>
-                        {nameProduct}
+                        {data.title}
                     </h2>
                     <p className="typeProduct">
-                        Fauteuil
+                        {data.category}
                     </p>
                     <p className="descriptionProduct">
-                    Fauteuil tapissé d’un tissu en lin avec structure en bois de couleur naturelle. Fauteuil tapissé d’un tissu en lin avec structure en bois de couleur naturelle.
+                        {data.description}
                     </p>
                     <p className="dimensionsProduct">
                         <h3>Dimensions</h3>
-                        <p>Voici les dimensions.</p>
+                        <p>{data.dimension}.</p>
                     </p>
                     <p className="textureProduct">
                         <h3>Matière</h3>
-                        <p>Voici la matière.</p>
+                        <p>{data.material}</p>
                     </p>
                     <p className="colorProduct">
                         <h3>Couleur</h3>
-                        <p>Voici la couleur.</p>
+                        <p>{data.color}</p>
                     </p>
 
                     <div className="footerInfos">
                         <h2 className="priceProduct">
-                            100€
+
+                            {data.price}€
                         </h2>
                         <IconButtonDesign color='primary' value='Ajouter au panier'/>
                     </div>
