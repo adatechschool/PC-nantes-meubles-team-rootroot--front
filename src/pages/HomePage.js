@@ -45,11 +45,12 @@ const Home = (props) => {
         <Header />
         <div className="container">
           <div className="allProducts">
-            <h1>Tous nos produits</h1>
-            <ButtonDesign value="Classer par prix" color="secondary" onClick={handleSortPrice}></ButtonDesign>
-            <ColorDropDownButton onColorSelect={handleSortColor}></ColorDropDownButton> 
-            <CategoryDropDownButton onCategorySelect={handleSortCategory}></CategoryDropDownButton> 
-
+              <h1 className="title_Home">Tous nos produits</h1>
+            <div className="filter_button">
+              <ButtonDesign value="Classer par prix" color="secondary" onClick={handleSortPrice} />
+              <ColorDropDownButton onColorSelect={handleSortColor} />
+              <CategoryDropDownButton onCategorySelect={handleSortCategory} />
+            </div>
           </div>
           <div className="cards">
             <GetCard urlToFetch={urlToFetch}/>
@@ -58,21 +59,7 @@ const Home = (props) => {
       </section>
       <Footer />
     </div>
-      <div>
-        <section className="content" id="content">
-          <Header />
-          <div className="container">
-            <div className="allProducts">
-              <h1>Tous nos produits</h1>
-            </div>
-            <div className="cards">
-              <GetCard />
-            </div>
-          </div>
-        </section>
-        <Footer />
-      </div>
-    </div>
-  </div>);
+  
+ );
 };
 export default Home;

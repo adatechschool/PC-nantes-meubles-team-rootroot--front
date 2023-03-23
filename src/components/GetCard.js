@@ -39,6 +39,7 @@ function GetCard(props) {
       {data.slice(0, displayCount).map((item) => (
         <Card
           key={item.id}
+          picture={item.picture}
           title={item.title}
           price={item.price}
           description={item.description}
