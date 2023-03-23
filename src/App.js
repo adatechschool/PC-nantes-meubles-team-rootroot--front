@@ -1,6 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-router-dom';
-import './App.css';
+import React from "react";
+import ReactDOM from "react-router-dom";
+import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from './pages/HomePage';
 import Admin from './pages/Admin';
@@ -16,6 +16,7 @@ import {
   Routes,
   Navigate,
 } from "react-router-dom";
+import Registration from "./pages/Registration";
 /*import AuthenticatedRoute from './components/AuthenticatedRoute';*/
 
 function App() {
@@ -29,19 +30,22 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-          <Route path='/admin' element={ <Admin/> }/>
-          <Route path='/' element={ <Home/> }/>
-          <Route path='/login' element={ <Login/> }/>
-          <Route path={`/product/:id`} element={ <Product name="fauteeeeeil"/> }/>
-          <Route path='/cart' element={ <Cart/> }/>
-        </Routes>   
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/registration" element={<Registration />} />
+          <Route
+            path={`/product/:id`}
+            element={<Product name="fauteeeeeil" />}
+          />
+          <Route path="/cart" element={<Cart />} />
+        </Routes>
       </div>
-    </Router> 
+    </Router>
   );
 }
 
 export default App;
-
 
 //pour la partie login, il serait peut-être envisageable d'écrire ce code-ci à la place de celui au dessus
 //dans le return

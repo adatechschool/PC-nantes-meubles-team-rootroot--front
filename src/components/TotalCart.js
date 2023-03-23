@@ -1,16 +1,13 @@
 import "./TotalCart.css";
-// import { Link } from 'react-router-dom';
-import Button from './ButtonDesign';
+import { Link } from "react-router-dom";
+import Button from "./ButtonDesign";
+import React from "react";
 
 function TotalCart(props) {
+  const price = props.price;
 
-    const price = props.price;
-   
-  
   return (
-
     <div className="total-cart">
-     
       <div className="total">
         <p className="totalarticle">Total</p>
         <p id="price-total">{price}€</p>
@@ -24,6 +21,5 @@ function TotalCart(props) {
    </div>
   );
 }
-
 
 export default TotalCart;
