@@ -1,4 +1,6 @@
 import "./ButtonDesign.css";
+import React from "react";
+
 
 const ButtonDesign = (props) => {
   const color = props.color;

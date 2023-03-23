@@ -1,7 +1,8 @@
 import "./ProductCart.css";
-import meuble from "../assets/meuble.png";
 import { Link } from "react-router-dom";
+import meuble from "../assets/meuble.png";
 import Button from "../components/ButtonDesign";
+import React from "react";
 
 function ProductCart(props) {
   //retrieve the props in constants

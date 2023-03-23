@@ -1,6 +1,6 @@
 import "./HomeScrollDown.css";
 import ScrollArrow from "../assets/scroll_arrow_2.png";
-
+import React from "react";
 function GoToContent() {
   window.location.href = "#content";
 }
