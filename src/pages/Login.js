@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Header from "../components/Header";
-import Footer from "../components/Footer";
+import FooterFixed from "../components/FooterFixed";
 import ButtonDesign from "./../components/ButtonDesign";
 import { useNavigate } from "react-router-dom";
 
@@ -96,7 +96,7 @@ const Login = () => {
           </div>
         </fieldset>
       </form>
-      <Footer />
+      <FooterFixed />
     </div>
   );
 };

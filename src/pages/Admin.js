@@ -16,10 +16,14 @@ const Admin = () => {
     navigate("/");
   } else {
     return (
-      <div>
-        <Header />
-        <div className="table">
-          <AdminTable />
+        <div>
+            <Header/>
+            <div className='container'>
+                <div className='table'>
+                <AdminTable/>
+                </div>
+            </div>
+            <Footer/>
         </div>
         <Footer />
       </div>

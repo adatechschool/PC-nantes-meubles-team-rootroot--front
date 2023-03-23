@@ -53,6 +53,7 @@ function GetProductCard() {
       {data.map((data) => (
         <ProductCart
           id={data.id}
+          picture={data.picture}
           title={data.title}
           price={data.price}
           color={data.color}

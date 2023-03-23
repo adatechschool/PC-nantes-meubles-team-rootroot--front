@@ -6,7 +6,7 @@ import React from "react";
 
 function ProductCart(props) {
   //retrieve the props in constants
-  const { id, title, color, price } = props;
+  const { id, title, color, price, picture } = props;
 
   //"supprimer du panier" handler
   const handleRemove = () => {
@@ -31,7 +31,7 @@ function ProductCart(props) {
     <div className="product-cart">
       <div className="complete-elements">
         <div className="picture-meuble">
-          <img src={meuble} alt="meuble" className="pictureMeuble" />
+          <img src={picture} alt="meuble" className="pictureMeuble" />
         </div>
         <div className="details-product">
           <h1>{title}</h1>
