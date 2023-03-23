@@ -46,7 +46,7 @@ const Product = () => {
                 <div className="carroussel">
                   <img src={data.picture} alt="meuble-product" />
                     </div>
-                < className="boxInfos">
+                <div className="boxInfos">
                         <h2>
                             {data.title}
                         </h2>
