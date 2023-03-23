@@ -2,11 +2,12 @@ import React from "react";
 import ReactDOM from "react-router-dom";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Home from "./pages/HomePage";
-import Admin from "./pages/Admin";
-import Cart from "./pages/Cart";
-import Login from "./pages/Login";
-import Product from "./pages/Product";
+import Home from './pages/HomePage';
+import Admin from './pages/Admin';
+import Cart from './pages/Cart';
+import Login from './pages/Login';
+import Product from './pages/Product';
+
 //import { hasAuthenticated } from './services/AuthApi';
 
 import {

@@ -6,18 +6,18 @@ import Footer from '../components/Footer';
 //Ici on appele le tableau crée:
 import AdminTable from '../components/AdminTable';
 
-//Ici on réuni ensemble les composants de la page
-const Admin = () => {
-    
+//Ici on réunit ensemble les composants de la page
+
+const Admin = () =>{
     return (
         <div>
             <Header/>
-            <ButtonDesign color='secondary' value='supprimer un article'/>
-            <ButtonDesign color='secondary' value='modifier un article'/>
+            <div className='table'>
             <AdminTable/>
+            </div>
             <Footer/>
         </div>
     );
 }
-
+    
 export default Admin;

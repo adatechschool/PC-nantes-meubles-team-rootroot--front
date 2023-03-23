@@ -18,12 +18,17 @@
     background: #ff5c00;
     color: #ffffff;
     border-style: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 3px 16px
 } 
 
 .secondary {
     background: #ffffff;
     color:#ff5c00;
     border: 2px solid #ff5c00;
+    font-size: medium;
+    padding: 1px 12px
 }
 
 .svg {

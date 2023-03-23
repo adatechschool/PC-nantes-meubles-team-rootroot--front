@@ -1,21 +1,26 @@
 import React from 'react';
-import ButtonDesign from '../components/ButtonDesign';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import ProductCart from '../components/ProductCart';
-import TotalCart from '../components/TotalCart';
-import Adress from '../components/Adress';
+// import TotalCart from '../components/TotalCart';
+// import Adress from '../components/Adress';
+import GetProductCart from '../components/GetProductCart';
+import flower from "../assets/flowers.svg";
 
 const Cart = () => {
 
     return (
-        <div className=''>
-            <Header/>
-            <ProductCart title="Fauteuil vintage" color="vert sapin" price="79"/>
-            <TotalCart price="79"/>
-            <Adress/>
-            <Footer/>
-        </div>
+        <>
+        <Header/>
+        <div className='bodycartpage'>  
+            <img className='flower' src={flower} alt='fleur'/>
+            <div className='cartcontainer'>
+                {localStorage.cart ? (<GetProductCart /> ):(<span>panier vide</span>)}
+                {/* <TotalCart price="79"/> */}
+                 {/* <Adress/> */}
+            </div>
+        </div> 
+        <Footer/>
+        </>
     );
 }
 

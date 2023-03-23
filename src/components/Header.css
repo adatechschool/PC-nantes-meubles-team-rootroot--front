@@ -19,12 +19,18 @@
 .header-menu {
     display: flex;
     gap: 50px;
+
+    margin-bottom: 0px;
 }
 
 .header-links {
     color: #1E1E1E;
     text-decoration: none;
     position: relative;
+}
+.header-links:hover{
+    text-decoration: none;
+    color:#1E1E1E
 }
 
 .header-links::after {

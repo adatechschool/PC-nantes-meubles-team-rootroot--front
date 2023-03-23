@@ -9,13 +9,16 @@ function TotalCart(props) {
   return (
     <div className="total-cart">
       <div className="total">
-        <h1>Total</h1>
+        <p className="totalarticle">Total</p>
         <p id="price-total">{price}€</p>
-        <p>(1 article)</p>
+        <p className="totalarticle">(1 article)</p>
       </div>
+      <div className="boutoncommande">
+        <Button color="primary" value="Passer commande"/>
+      </div>
+      
 
-      <Button color="primary" value="Passer commande" />
-    </div>
+   </div>
   );
 }
 

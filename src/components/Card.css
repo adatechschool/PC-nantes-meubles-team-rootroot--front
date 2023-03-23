@@ -23,34 +23,45 @@ border-radius: 45px 45px 0px 0px;
     text-align: left;
 }
 
+.titleDescript{
+    font-size: 1.5em;
+    overflow: auto;
+    text-overflow: ellipsis;
+    height: 30px
+}
+
 .paraphDescript {
     font-size: 17px;
     font-family: 'Inter';
     font-style: normal;
+    overflow: scroll;
+    width: auto;
+    height: 100px;
 }
 
-.type {
+.category {
     font-weight: bold;
 }
 
 .descrip-button {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 .price {
     display: flex;
     width: 116px;
-    height: 73px;
-    position: absolute;
-    right: 30px;
-    bottom: 90px;
+    height: 0px;
+    position: relative;
+    left: 230px;
+    bottom: 30px;
 }
 
 
 .price p {
     color: #FFFFFF;
-    font-size: 60px;
+    font-size: 40px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: bold; 
@@ -61,4 +72,8 @@ border-radius: 45px 45px 0px 0px;
     border-radius: 50px;
     padding: 10px;
 
+}
+
+.positionimage{
+    margin-top: 75px;
 }

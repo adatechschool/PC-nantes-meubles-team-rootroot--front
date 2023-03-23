@@ -4,6 +4,7 @@ import Footer from '../components/Footer';
 import Carroussel from '../components/Carroussel';
 import React, { useState, useEffect } from 'react';
 import {useParams} from 'react-router-dom';
+import flower from "../assets/flowers.svg";
 
 
 
@@ -46,22 +47,19 @@ const Product = () => {
                         {data.title}
                     </h2>
                     <p className="typeProduct">
-                        {data.category}
+                        <strong>{data.category}</strong>
                     </p>
                     <p className="descriptionProduct">
                         {data.description}
                     </p>
                     <p className="dimensionsProduct">
-                        <h3>Dimensions</h3>
-                        <p>{data.dimension}.</p>
+                        <h3>Dimensions : {data.dimension}</h3>
                     </p>
                     <p className="textureProduct">
-                        <h3>Matière</h3>
-                        <p>{data.material}</p>
+                        <h3>Matière : {data.material}</h3>
                     </p>
                     <p className="colorProduct">
-                        <h3>Couleur</h3>
-                        <p>{data.color}</p>
+                        <h3>Couleur : {data.color}</h3>
                     </p>
 
                     <div className="footerInfos">
@@ -73,6 +71,7 @@ const Product = () => {
                     </div>
 
                 </div>
+                <img className='flowerproduct' src={flower} alt='fleur'/>
             </div>
             <Footer/>
         </div>

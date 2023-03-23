@@ -7,29 +7,41 @@ import { Link } from "react-router-dom";
 import React from "react";
 
 const Footer = () => {
-  return (
-    <div className="footer">
-      <ul className="footer-menu">
-        <Link to="/" className="footer-links">
-          Tous nos produits
-        </Link>
-        <Link to="/cart" className="footer-links">
-          Panier
-        </Link>
-        <Link to="/login" className="footer-links">
-          Login
-        </Link>
-      </ul>
 
-      <div className="social">
-        <img src={facebook} alt="logo facebook"></img>
-        <img src={instagram} alt="logo instagram"></img>
-        <img src={pinterest} alt="logo pinterest"></img>
-      </div>
+    return (
+        <div className="footer">
+                        
+            <ul className="footer-menu">
+            <Link
+                to='/'
+                className='footer-links'            
+                >
+                Tous nos produits
+            </Link>                    
+            <Link
+                to='/cart'
+                className='footer-links'            
+                >
+                Panier
+            </Link>                    
+            <Link
+                to='/login'
+                className='footer-links'            
+                >
+                Login
+            </Link>
+            </ul>
+            <p className="footer-menu">Votre magasin Kalaxy. 18 route de la redoute 97400 St Denis </p>
+            <div className="social">
+                <img src={facebook} alt="logo facebook"></img>
+                <img src={instagram} alt="logo instagram"></img>
+                <img src={pinterest} alt="logo pinterest"></img>
+            </div>
+            
+            <img src={logo} alt="logo" className="logo" />
+        </div>
 
-      <img src={logo} alt="logo" className="logo" />
-    </div>
-  );
-};
+    );
+}
 
 export default Footer;
