@@ -58,6 +58,21 @@ const Home = (props) => {
       </section>
       <Footer />
     </div>
-  );
+      <div>
+        <section className="content" id="content">
+          <Header />
+          <div className="container">
+            <div className="allProducts">
+              <h1>Tous nos produits</h1>
+            </div>
+            <div className="cards">
+              <GetCard />
+            </div>
+          </div>
+        </section>
+        <Footer />
+      </div>
+    </div>
+  </div>);
 };
 export default Home;

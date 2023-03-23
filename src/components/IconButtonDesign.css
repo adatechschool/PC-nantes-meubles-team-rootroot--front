@@ -14,6 +14,10 @@
     vertical-align: middle;
 }
 
+#button:hover{
+    background-color: black;
+}
+
 .primary {
     background: #ff5c00;
     color: #ffffff;
@@ -29,6 +33,10 @@
     border: 2px solid #ff5c00;
     font-size: medium;
     padding: 1px 12px
+}
+
+.primary:hover, .secondary:hover{
+    background-color: black;
 }
 
 .svg {

@@ -22,6 +22,7 @@ const IconButtonDesign = (props) => {
             //juste add the value
             localStorage.cart += value + ","
         }
+        window.alert("L'article a été ajouté au panier.")
         
     }
     

@@ -129,7 +129,7 @@ function AdminTable() {
             setPicture(e.target.value);
           }}
         ></input>
-        <button onClick={updateMeuble}>mettre à jour</button>
+        <ButtonDesign onClick={updateMeuble} color="secondary" value="Mettre à jour" />
       </div>
 
       <Table className="table" striped bordered hover variant="dark">
