@@ -56,69 +56,136 @@ function AdminTable() {
     });
   }
 
-        //Ici c'est pour faire l'appel de l'API
-        this.state = {
-            product: [
-                {'id':1, 
-                'title': 'Table', 
-                'description':'Round Coffee Table. 40cm high.', 
-                'price':'99€', 
-                'color':'Light-Brown', 
-                'material':'wood', 
-                'picture': 'img src="../assets/brown-table.jpg"',
-                'options': 'Modify Delete'
-                },
+  // selecting the meuble
+  function selectMeuble(id) {
+    alert(id);
+    console.warn("function select is called", data[id - 1]);
+    let item = data[id - 1];
+    setId(item.id);
+    setCategory(item.category);
+    setTitle(item.title);
+    setDescription(item.description);
+    setPrice(item.price);
+    setPicture(item.picture);
+  }
 
-                {'id':2, 
-                'title': 'Chair', 
-                'description':'Nice chair. 50cm high.', 
-                'price':'40€', 
-                'color':'Black', 
-                'material':'metal', 
-                'picture': 'img src="../assets/black-chair.jpg"',
-                'options': 'Modify Delete'
-                },
-            ]
-        }
-    }
+  // update meuble
+  function updateMeuble() {
+    let item = { id, category, title, description, price, picture };
+    console.log(item);
+    fetch(
+      `http://127.0.0.1:8000/put_meuble/${item.id}/category=${item.category}/title=${item.title}/description=${description}/price=${price}`,
+      {
+        method: "PUT",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+      }
+    ).then((result) => {
+      console.log(result);
+      result.json().then((resp) => {
+        console.warn(resp);
+        getMeubles();
+      });
+    });
+  }
 
-    render(){
-        return (
-            //Ici c'est la création du tableau et son style//
-        <Table striped bordered hover variant="dark">
-            <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>Title</th>
-                    <th>Description</th>
-                    <th>Price</th>
-                    <th>Color</th>
-                    <th>Material</th>
-                    <th>Picture</th>
-                    <th>Options</th>
-                </tr>
-            </thead>
+  return (
+    <div>
+      <div>
+        <input
+          type="text"
+          value={category}
+          onChange={(e) => {
+            setCategory(e.target.value);
+          }}
+        ></input>
+        <input
+          type="text"
+          value={title}
+          onChange={(e) => {
+            setTitle(e.target.value);
+          }}
+        ></input>
+        <input
+          type="text"
+          value={description}
+          onChange={(e) => {
+            setDescription(e.target.value);
+          }}
+        ></input>
+        <input
+          type="text"
+          value={price}
+          onChange={(e) => {
+            setPrice(e.target.value);
+          }}
+        ></input>
+        <input
+          type="text"
+          value={picture}
+          onChange={(e) => {
+            setPicture(e.target.value);
+          }}
+        ></input>
+        <button onClick={updateMeuble}>mettre à jour</button>
+      </div>
 
-            <tbody>            
-                {/* Ici ce sont les appels 'props' */}
-                {
-                    this.state.AdminTable.map((AdminTable) => 
-                        <tr>
-                            <td> {AdminTable.id} </td>
-                            <td> {AdminTable.title} </td>
-                            <td> {AdminTable.description} </td>
-                            <td> {AdminTable.price} </td>
-                            <td> {AdminTable.color} </td>
-                            <td> {AdminTable.material} </td>
-                            <td> {AdminTable.picture} </td>
-                            <td> {AdminTable.options} </td>
-                        </tr>
-                    )
-                }
-            </tbody>
-        </Table>
-        )
-    }
+      <Table className="table" striped bordered hover variant="dark">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Category</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Color</th>
+            <th>Material</th>
+            <th>Picture</th>
+            <th>Dimension</th>
+            <th>Modifier</th>
+            <th>Supprimer</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {data &&
+            data.map((meuble) => (
+              <tr>
+                <td> {meuble.id} </td>
+                <td> {meuble.category} </td>
+                <td> {meuble.title}</td>
+                <td> {meuble.description} </td>
+                <td> {meuble.price} </td>
+                <td> {meuble.color} </td>
+                <td> {meuble.material} </td>
+                <td> {meuble.picture} </td>
+                <td> {meuble.dimension} </td>
+                <td>
+                  <ButtonDesign
+                    //selecting the meuble
+                    onClick={() => selectMeuble(meuble.id)}
+                    className="boutonadmin"
+                    color="secondary"
+                    value="modifier"
+                  />
+                </td>
+                <td>
+                  <ButtonDesign
+                    // adds event listener and on click deletes the meuble accordinng the ID
+                    onClick={() => deleteMeuble(meuble.id)}
+                    className="boutonadmin"
+                    color="secondary"
+                    value="supprimer"
+                  />
+                </td>
+              </tr>
+            ))}
+        </tbody>
+      </Table>
+    </div>
+  );
 }
 
 export default AdminTable;
