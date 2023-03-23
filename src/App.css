@@ -30,7 +30,6 @@ h1 {
     margin-bottom: 30px;
 }
 .allProducts{
-  width: 645px;
   height: 90px;
   font-family: 'Gloock';
   font-style: normal;
@@ -40,7 +39,7 @@ h1 {
   display: flex;
   align-items: center;
   letter-spacing: 0.03em;
-  color: #1E1E1E;
+  color: #1E1E1E;  
 }
 .carroussel img {
   height: 520px;
@@ -106,5 +105,25 @@ h1 {
   width: 100%;
   justify-content: space-between;
 }
+
+.filter_button {
+  display: flex;
+  flex-direction: row;
+  font-size: 15px;
+  font-family: 'Inter';
+  font-weight: bold;
+  height: 40px;
+  width: 1000px;
+  align-items: center;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.title_Home {
+   width: 400px;
+   height: 100px;
+   padding-top: 20px;
+}
+
 
 
