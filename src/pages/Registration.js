@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import ButtonDesign from "../components/ButtonDesign";
 import Footer from "../components/Footer";
+import { useNavigate } from "react-router-dom";
 
 const Registration = () => {
   const [user, setUser] = useState({
@@ -9,6 +10,8 @@ const Registration = () => {
     email: "",
     password: "",
   });
+
+  const navigate = useNavigate();
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -40,6 +43,7 @@ const Registration = () => {
 
       const jsonData = await response.json();
       console.log(jsonData);
+      navigate('/')
     } catch (err) {
       console.log(err.message);
     }
@@ -88,7 +92,11 @@ const Registration = () => {
             />
           </div>
           <div>
-            <ButtonDesign type="submit" color="secondary" value="Se connecter" />
+            <ButtonDesign
+              type="submit"
+              color="secondary"
+              value="Se connecter"
+            />
           </div>
         </fieldset>
       </form>
