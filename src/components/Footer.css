@@ -6,7 +6,7 @@
     justify-content: space-between;
     padding: 15px 30px 15px 30px;
     position: sticky;
-    bottom: 0;
+    /* bottom: 0; */
     width: 100%;
 }
 

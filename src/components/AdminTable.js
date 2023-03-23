@@ -17,7 +17,9 @@ function AdminTable() {
   const [title, setTitle] = React.useState("");
   const [description, setDescription] = React.useState("");
   const [price, setPrice] = React.useState("");
-  const [picture, setPicture] = React.useState("");
+  const [color, setColor] = React.useState("");
+  const [material, setMaterial] = React.useState("");
+  const [picture, setPicture] = React.useState("")
   const [dimension, setDimension] = React.useState("");
   const [id, setId] = React.useState(null);
 
@@ -27,7 +29,7 @@ function AdminTable() {
 
   // gets all the meubles this function called twice. Once in the beginning and second time when you delete. it may be againg called when put method will be written
   function getMeubles() {
-    fetch("http://127.0.0.1:8000/get_all_card_meuble")
+    fetch("http://127.0.0.1:8000/get_all_meuble")
       .then((response) => response.json())
       .then((res) => {
         console.log(res);
@@ -35,6 +37,9 @@ function AdminTable() {
         setCategory(res[0].category);
         setDescription(res[0].description);
         setPicture(res[0].picture);
+        setColor(res[0].color);
+        setMaterial(res[0].material);
+        setDimension(res[0].dimension);
         setPrice(res[0].price);
         setTitle(res[0].title);
         setId(res[0].id);
@@ -66,15 +71,18 @@ function AdminTable() {
     setTitle(item.title);
     setDescription(item.description);
     setPrice(item.price);
+    setColor(item.color);
+    setDimension(item.dimension);
+    setMaterial(item.material);
     setPicture(item.picture);
   }
 
   // update meuble
   function updateMeuble() {
-    let item = { id, category, title, description, price, picture };
+    let item = { id, category, title, description, price, color, material, dimension, picture };
     console.log(item);
     fetch(
-      `http://127.0.0.1:8000/put_meuble/${item.id}/category=${item.category}/title=${item.title}/description=${description}/price=${price}`,
+      `http://127.0.0.1:8000/put_meuble/${item.id}/category=${item.category}/title=${item.title}/description=${description}/price=${price}/color=${color}/material=${material}/dimension=${dimension}`,
       {
         method: "PUT",
         headers: {
@@ -94,42 +102,101 @@ function AdminTable() {
   return (
     <div>
       <div>
-        <input
-          type="text"
-          value={category}
-          onChange={(e) => {
-            setCategory(e.target.value);
-          }}
-        ></input>
-        <input
-          type="text"
-          value={title}
-          onChange={(e) => {
-            setTitle(e.target.value);
-          }}
-        ></input>
-        <input
-          type="text"
-          value={description}
-          onChange={(e) => {
-            setDescription(e.target.value);
-          }}
-        ></input>
-        <input
-          type="text"
-          value={price}
-          onChange={(e) => {
-            setPrice(e.target.value);
-          }}
-        ></input>
-        <input
-          type="text"
-          value={picture}
-          onChange={(e) => {
-            setPicture(e.target.value);
-          }}
-        ></input>
-        <ButtonDesign onClick={updateMeuble} color="secondary" value="Mettre à jour" />
+      <Table className="table" striped bordered hover>
+      <thead>
+          <tr>
+            <th>Id</th>
+            <th>Category</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Color</th>
+            <th>Material</th>
+            <th>Dimension</th>
+            <th>Picture</th>
+            <th>Modifier</th>
+          </tr>
+        </thead>
+        <tbody>
+              <tr>
+                <td> {id} </td>
+                <td>
+                  <input
+                      type="text"
+                      value={category}
+                      onChange={(e) => {
+                        setCategory(e.target.value);
+                      }}
+                      ></input>
+                </td>
+                <td>
+                  <input
+                      type="text"
+                      value={title}
+                      onChange={(e) => {
+                        setTitle(e.target.value);
+                      }}
+                    ></input>
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    value={description}
+                    onChange={(e) => {
+                      setDescription(e.target.value);
+                    }}
+                  ></input>
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    value={price}
+                    onChange={(e) => {
+                      setPrice(e.target.value);
+                    }}
+                  ></input>
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    value={color}
+                    onChange={(e) => {
+                      setColor(e.target.value);
+                    }}
+                  ></input>
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    value={material}
+                    onChange={(e) => {
+                      setMaterial(e.target.value);
+                    }}
+                  ></input>
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    value={dimension}
+                    onChange={(e) => {
+                      setDimension(e.target.value);
+                    }}
+                  ></input>
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    value={picture}
+                    onChange={(e) => {
+                      setPicture(e.target.value);
+                    }}
+                  ></input>
+                </td>
+                <td><ButtonDesign onClick={updateMeuble} color="secondary" value="Mettre à jour" /></td>
+              </tr>
+          </tbody>
+       
+</Table>
       </div>
 
       <Table className="table" striped bordered hover variant="dark">
