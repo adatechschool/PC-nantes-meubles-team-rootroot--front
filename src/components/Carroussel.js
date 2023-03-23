@@ -1,11 +1,13 @@
-import meuble from "../assets/meuble.png";
 
-const Carroussel = () => {
 
+const Carroussel = (props) => {
+
+    const { picture } = props;
+    
     //RENDER
     return (
         <div className="carroussel">
-            <img src={meuble} alt="image_meuble"></img>
+            <img src={picture} alt="image_meuble"></img>
         </div>
     );
 };

@@ -41,7 +41,10 @@ const Product = () => {
         <div>
             <Header/>
             <div className="containerDetailsProduct">
-                <Carroussel />
+                
+                <div className="carroussel">
+                  <img src={data.picture} alt="meuble-product" />
+                </div>
                 <div className="boxInfos">
                     <h2>
                         {data.title}
