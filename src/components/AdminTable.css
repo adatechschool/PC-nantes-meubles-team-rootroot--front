@@ -1,0 +1,10 @@
+th, td {
+    font-family: "Gloock";
+    text-align: center;
+}
+
+.table{
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-top: 1em;
+}

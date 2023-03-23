@@ -1,4 +1,6 @@
 import "./ButtonDesign.css";
+import React from "react";
+
 
 const ButtonDesign = (props) => {
   const color = props.color;
@@ -8,7 +10,10 @@ const ButtonDesign = (props) => {
   //RENDER
   return (
     <div>
-      <button className={`button ${color}`} onClick={onClick} value={value}> {value} </button>
+      <button className={`button ${color}`} value={value} onClick={onClick}>
+        {value}
+      </button>
+
     </div>
   );
 };

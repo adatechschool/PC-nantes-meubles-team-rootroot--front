@@ -1,11 +1,12 @@
 import "./ProductCart.css";
-import meuble from "../assets/meuble.png";
 import { Link } from "react-router-dom";
+import meuble from "../assets/meuble.png";
 import Button from "../components/ButtonDesign";
+import React from "react";
 
 function ProductCart(props) {
   //retrieve the props in constants
-  const { id, title, color, price } = props;
+  const { id, title, color, price, picture } = props;
 
   //"supprimer du panier" handler
   const handleRemove = () => {
@@ -30,19 +31,18 @@ function ProductCart(props) {
     <div className="product-cart">
       <div className="complete-elements">
         <div className="picture-meuble">
-          <img src={meuble} alt="meuble" className="pictureMeuble" />
+          <img src={picture} alt="meuble" className="pictureMeuble" />
         </div>
         <div className="details-product">
           <h1>{title}</h1>
-          <p>couleur: {color}</p>
-          <p>Quantité: 1</p>
+          <p className="couleur">couleur: {color}</p>
           <p id="price">
             Prix: <span id="price-product">{price}€</span>
           </p>
         </div>
 
         <div className="button-product">
-          <Link to={`/product/${id}`}> <Button color="secondary" value="Plus de détails"></Button></Link>
+          <Link to={`/product/${id}`} className="boutonmodifier"> <Button color="secondary" value="Plus de détails"></Button></Link>
           <Button
             onClick={handleRemove}
             color="secondary"

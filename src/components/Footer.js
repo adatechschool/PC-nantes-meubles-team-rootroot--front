@@ -3,7 +3,8 @@ import logo from "../assets/kalaxy_logo_text_white.svg";
 import facebook from "../assets/facebook.svg";
 import instagram from "../assets/instagram.svg";
 import pinterest from "../assets/pinterest.svg";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import React from "react";
 
 const Footer = () => {
 
