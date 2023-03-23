@@ -42,8 +42,11 @@ const Product = () => {
             <Header/>
             <div className='container'>
                 <div className="containerDetailsProduct">
-                    <Carroussel />
-                    <div className="boxInfos">
+                    
+                <div className="carroussel">
+                  <img src={data.picture} alt="meuble-product" />
+                    </div>
+                < className="boxInfos">
                         <h2>
                             {data.title}
                         </h2>
@@ -62,7 +65,7 @@ const Product = () => {
                         <p className="colorProduct">
                             <h3>Couleur : {data.color}</h3>
                         </p>
-
+                    
                         <div className="footerInfos">
                             <h2 className="priceProduct">
 
