@@ -60,42 +60,43 @@ const Login = () => {
   };
 
   return (
+  
     <div className="tab-content">
       <Header />
-      <form className="form-profile" onSubmit={userLogin}>
-        <fieldset>
-          <legend>Se connecter</legend>
-          <div className="form-group">
-            <label htmlFor="email">Email</label>
-            <input
-              type="text"
-              name="email"
-              className="form-control"
-              id="email"
-              placeholder="mail@mail.com"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="password">Password</label>
-            <input
-              type="password"
-              name="password"
-              className="form-control"
-              id="password"
-              placeholder="Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </div>
-          <div>
-            <button type="submit" color="secondary" value="Se connecter">
-              submit
-            </button>
-          </div>
-        </fieldset>
-      </form>
+      <div className="container">
+        <form className="form-profile" onSubmit={userLogin}>
+          <fieldset>
+            <legend>Content de vous retrouver!</legend>
+            <div className="form-group">
+              <label htmlFor="email">Email</label>
+              <input
+                type="text"
+                name="email"
+                className="form-control"
+                id="email"
+                placeholder="mail@mail.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="password">Password</label>
+              <input
+                type="password"
+                name="password"
+                className="form-control"
+                id="password"
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </div>
+            <div>
+              <ButtonDesign type="submit" color="secondary" value="Se connecter"/>
+            </div>
+          </fieldset>
+        </form>
+      </div>
       <FooterFixed />
     </div>
   );

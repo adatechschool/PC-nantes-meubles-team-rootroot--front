@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import ButtonDesign from "../components/ButtonDesign";
-import Footer from "../components/Footer";
+import FooterFixed from "../components/FooterFixed";
 import { useNavigate } from "react-router-dom";
 
 const Registration = () => {
@@ -52,55 +52,57 @@ const Registration = () => {
   return (
     <div className="tab-content">
       <Header />
-      <form className="form-profile" onSubmit={handleSubmit}>
-        <fieldset>
-          <legend>Inscrivez vous</legend>
-          <div className="form-group">
-            <label htmlFor="name">Pseudo</label>
-            <input
-              type="text"
-              name="name"
-              className="form-control"
-              id="name"
-              placeholder="Jean-mi"
-              value={user.name}
-              onChange={handleChange}
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="email">Email</label>
-            <input
-              type="email"
-              name="email"
-              className="form-control"
-              id="email"
-              placeholder="mail@mail.com"
-              value={user.email}
-              onChange={handleChange}
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="password">Password</label>
-            <input
-              type="password"
-              name="password"
-              className="form-control"
-              id="password"
-              placeholder="Password"
-              value={user.password}
-              onChange={handleChange}
-            />
-          </div>
-          <div>
-            <ButtonDesign
-              type="submit"
-              color="secondary"
-              value="Se connecter"
-            />
-          </div>
-        </fieldset>
-      </form>
-      <Footer />
+      <div className="container">
+        <form className="form-profile" onSubmit={handleSubmit}>
+          <fieldset>
+            <legend>Inscrivez-vous</legend>
+            <div className="form-group">
+              <label htmlFor="name">Pseudo</label>
+              <input
+                type="text"
+                name="name"
+                className="form-control"
+                id="name"
+                placeholder="Jean-mi"
+                value={user.name}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="email">Email</label>
+              <input
+                type="email"
+                name="email"
+                className="form-control"
+                id="email"
+                placeholder="mail@mail.com"
+                value={user.email}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="password">Password</label>
+              <input
+                type="password"
+                name="password"
+                className="form-control"
+                id="password"
+                placeholder="Password"
+                value={user.password}
+                onChange={handleChange}
+              />
+            </div>
+            <div>
+              <ButtonDesign
+                type="submit"
+                color="secondary"
+                value="Se connecter"
+              />
+            </div>
+          </fieldset>
+        </form>
+      </div>
+      <FooterFixed />
     </div>
   );
 };
