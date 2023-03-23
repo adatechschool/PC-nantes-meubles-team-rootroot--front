@@ -7,18 +7,20 @@ const Home = () => {
   return (
     <div>
       <HomeScrollDown />
-      <section className="content" id="content">
-        <Header />
-        <div className="container">
-          <div className="allProducts">
-            <h1>Tous nos produits</h1>
+      <div>
+        <section className="content" id="content">
+          <Header />
+          <div className="container">
+            <div className="allProducts">
+              <h1>Tous nos produits</h1>
+            </div>
+            <div className="cards">
+              <GetCard />
+            </div>
           </div>
-          <div className="cards">
-            <GetCard />
-          </div>
-        </div>
-      </section>
-      <Footer />
+        </section>
+        <Footer />
+      </div>
     </div>
   );
 };

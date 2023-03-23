@@ -1,35 +1,35 @@
-.footer {
+.footerfixed {
     background-color: #a48468;
     color:#fff;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 15px 30px 15px 30px;
-    position: sticky;
+    position: fixed;
     bottom: 0;
     width: 100%;
 }
 
-.footer .logo {
+.footerfixed .logo {
     width: 120px;
 }
 
-.footer-menu {
+.footerfixed-menu {
     display: inline-flex;
     gap: 40px;
     margin-bottom: 0px;
 }
 
-.footer-links {
+.footerfixed-links {
     color: #fff;
     text-decoration: none;
 }
 
-.social {
+.socialfixed {
     display: inline-flex;
     gap: 40px;
 }
 
-.social img {
+.socialfixed img {
     height: 25px;
 }

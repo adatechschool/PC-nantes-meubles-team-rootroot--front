@@ -12,8 +12,10 @@ const Admin = () =>{
     return (
         <div>
             <Header/>
-            <div className='table'>
-            <AdminTable/>
+            <div className='container'>
+                <div className='table'>
+                <AdminTable/>
+                </div>
             </div>
             <Footer/>
         </div>
