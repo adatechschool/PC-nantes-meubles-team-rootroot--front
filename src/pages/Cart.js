@@ -15,7 +15,7 @@ const Cart = () => {
             <div className='bodycartpage'>  
                 <img className='flower' src={flower} alt='fleur'/>
                 <div className='cartcontainer'>
-                    {localStorage.cart ? (<GetProductCart /> ):(<span><strong>Votre panier est vide!</strong></span>)}
+                    {localStorage.cart ? (<GetProductCart /> ):(<h1>Votre panier est vide!</h1>)}
                     {/* <TotalCart price="79"/> */}
                     {/* <Adress/> */}
                 </div>
