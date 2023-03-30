@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+Kalaxy - front
+=============
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+__Authors__ Kristine Kirakosiani, Audrey Djibilian, Alice Darondeau, Cindy Bestaven, Gaëtan Sourisse, Justine Rougeulle, Mônica Salmazo, Nadège Hellmans, Klervy Le Dez
 
-## Available Scripts
+Projet réalisé dans le cadre de la formation à Ada Tech School en 7 jours
+_ _ _ _ 
 
-In the project directory, you can run:
+Objectifs du projet
+---------------
+- [x] Création d'un site de vente de meubles commandé par une cliente
+- [x] Choix des technologies
+- [x] Respect d'un cahier des charges
+- [x] Création d'un site complet de vente
+- [x] Gestion d'interaction entre front et back
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Features & réalisations
+---------------
+* Création d'une maquette complète
+* Mise en place d'un rooting pour les différentes pages
+* Utilisation de props & hooks pour passer les données entre composants
+* Création de session
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+Pistes d'amélioration
+---------------
+* Amélioration la sécurité des données
+* Amélioration du css
+* Possibilité d'avoir plusieurs photos du meuble
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Photos du projet 
+---------------
+Lien vers un post linkedIn montrant une vidéo du projet(https://www.linkedin.com/posts/kirakosiani_site-web-reactjs-activity-7046397530217054208-qEWu?utm_source=share&utm_medium=member_desktop)
 
-### `npm run build`
+Homepage
+![homepage](https://user-images.githubusercontent.com/112544312/228829426-5aa82c03-2a96-4a7d-85ea-f259b295d35a.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Products
+![products](https://user-images.githubusercontent.com/112544312/228829675-f53305a3-87ed-4a72-a934-62497ce67925.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Product detail
+![productdetail](https://user-images.githubusercontent.com/112544312/228829621-91083f13-9e78-4b17-b450-ea8697e6cd13.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Cart
+![cart](https://user-images.githubusercontent.com/112544312/228829341-3c6a9eab-a0fc-4573-8c3d-059ea2425a86.png)
 
-### `npm run eject`
+Login
+![login](https://user-images.githubusercontent.com/112544312/228829554-ab2ffdba-6dc3-4086-9968-05c91df6c3c0.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Admin
+<img width="1440" alt="Admin" src="https://user-images.githubusercontent.com/112544312/228829506-61c82e65-2074-4985-9d72-39929eaab15a.png">
